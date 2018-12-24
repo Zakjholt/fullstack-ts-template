@@ -1,0 +1,23 @@
+{
+  "name": "budgie",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "watch:server": "parcel watch src/server/index.ts -d dist/server --target node",
+    "watch:app": "parcel watch src/app/index.html -d dist/app --target browser",
+    "dev": "concurrently 'npm run watch:server' 'npm run watch:app' 'nodemon dist/server/index.js'"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^4.1.0",
+    "nodemon": "^1.18.9",
+    "parcel-bundler": "^1.11.0",
+    "typescript": "^3.2.2"
+  },
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}
